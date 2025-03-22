@@ -8,8 +8,8 @@ const App = () => {
   useEffect(() => {
     axios.get("https://mern-hello.onrender.com/api/message")
       .then((res) => setMessage(res.data.message))
-      .catch((err) => console.error("Error fetching message:", err.response?.data || err.message));
-  }, []);
+      .catch((err) => console.error("Error fetching message:", err));
+  }, []);  
 
   return (
     <div className="App">
