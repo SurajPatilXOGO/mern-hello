@@ -10,4 +10,4 @@ services:
       - key: MONGO_URI
         value: "MONGO_URI=mongodb+srv://surajpatilxogo:XUYVsoRe8S9HxAfW@mern-hello.elec1.mongodb.net/?retryWrites=true&w=majority&appName=Mern-hello"
       - key: PORT
-        value: "5000"
+        value: "10000"
