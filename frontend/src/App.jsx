@@ -1,26 +1,20 @@
-
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-
-const API_URL = "https://mern-backend.onrender.com/api/message"; // Use deployed backend URL
 
 const App = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get(API_URL)
+    axios
+      .get("http://localhost:5000/api/message") // Updated port
       .then((res) => setMessage(res.data.message))
-      .catch((err) => {
-        console.error("Error fetching message:", err.response ? err.response.data : err.message);
-      });
+      .catch((err) => console.error("Error fetching message:", err.response?.data || err.message));
   }, []);
-  
 
   return (
     <div className="App">
-      <h1>{message}</h1>
+      <h1>{message || "Loading message..."}</h1>
     </div>
   );
 };
