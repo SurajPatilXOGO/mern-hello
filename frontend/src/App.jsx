@@ -6,7 +6,7 @@ const App = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get("https://your-backend.onrender.com/api/message")
+    axios.get("https://mern-hello.onrender.com/api/message")
       .then((res) => setMessage(res.data.message))
       .catch((err) => console.error("Error fetching message:", err.response?.data || err.message));
   }, []);
