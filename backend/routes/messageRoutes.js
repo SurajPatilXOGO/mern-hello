@@ -1,6 +1,5 @@
 const express = require("express");
-const Message = require("../models/message"); // Fixed file name case issue
-
+const Message = require("../models/message"); // Ensure case matches exactly
 const router = express.Router();
 
 // Fetch or Create a message
