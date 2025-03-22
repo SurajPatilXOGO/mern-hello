@@ -6,8 +6,7 @@ const App = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/message") // Updated port
+    axios.get("https://your-backend.onrender.com/api/message")
       .then((res) => setMessage(res.data.message))
       .catch((err) => console.error("Error fetching message:", err.response?.data || err.message));
   }, []);
