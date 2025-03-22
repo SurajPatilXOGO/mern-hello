@@ -8,7 +8,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "https://mern-hello-frontend.onrender.com" }));
 app.use(express.json());
 
 app.use("/api/message", messageRoutes);
