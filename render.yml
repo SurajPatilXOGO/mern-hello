@@ -2,7 +2,7 @@ services:
   - type: web
     name: backend
     env: node
-    repo: https://github.com/your-username/mern-hello
+    repo: https://github.com/SurajPatilXOGO/mern-hello.git
     rootDir: backend
     buildCommand: npm install
     startCommand: npm start
